@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>| Game Invitation Protocol |</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="gip.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyACIVv9SFcBZAZj7CtN_DsxQZ4Ca-V1WoU",
+            authDomain: "gameinvitationprotocol.firebaseapp.com",
+            databaseURL: "https://gameinvitationprotocol.firebaseio.com",
+            projectId: "gameinvitationprotocol",
+            storageBucket: "gameinvitationprotocol.appspot.com",
+            messagingSenderId: "186341211081"
+        };
+        firebase.initializeApp(config);
+        gipAPI.signInUser(username, password, function() {
+            console.log("user signed in!");
+        });
+    </script>
+</body>
+
+</html>
